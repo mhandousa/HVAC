@@ -1,244 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-/* HVACPro AI Design System - Industrial Tech Aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
 
-@layer base {
-  :root {
-    /* Core brand - Deep industrial blue with cyan accent */
-    --background: 210 20% 98%;
-    --foreground: 220 25% 10%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
-
-    /* Primary - Industrial cyan-blue */
-    --primary: 199 89% 48%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Secondary - Slate gray */
-    --secondary: 215 20% 93%;
-    --secondary-foreground: 220 25% 20%;
-
-    /* Muted - Soft gray */
-    --muted: 215 20% 95%;
-    --muted-foreground: 215 15% 45%;
-
-    /* Accent - Warm amber for alerts/highlights */
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    /* Status colors */
-    --success: 152 76% 40%;
-    --success-foreground: 0 0% 100%;
-    
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 10%;
-    
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --info: 199 89% 48%;
-    --info-foreground: 0 0% 100%;
-
-    /* Equipment status */
-    --status-operational: 152 76% 40%;
-    --status-maintenance: 38 92% 50%;
-    --status-fault: 0 72% 51%;
-    --status-offline: 215 15% 55%;
-
-    --border: 215 25% 88%;
-    --input: 215 25% 88%;
-    --ring: 199 89% 48%;
-
-    --radius: 0.625rem;
-
-    /* Sidebar */
-    --sidebar-background: 220 25% 12%;
-    --sidebar-foreground: 215 20% 85%;
-    --sidebar-primary: 199 89% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 25% 18%;
-    --sidebar-accent-foreground: 215 20% 95%;
-    --sidebar-border: 220 25% 20%;
-    --sidebar-ring: 199 89% 48%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(210 85% 40%));
-    --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(215 25% 95%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 20% 98%) 100%);
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 25% 10% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 25% 10% / 0.08), 0 2px 4px -2px hsl(220 25% 10% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(220 25% 10% / 0.1), 0 4px 6px -4px hsl(220 25% 10% / 0.05);
-    --shadow-glow: 0 0 20px hsl(199 89% 48% / 0.2);
-
-    /* Typography */
-    --font-sans: 'Space Grotesk', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-
-  .dark {
-    --background: 222 30% 8%;
-    --foreground: 210 20% 95%;
-
-    --card: 222 25% 12%;
-    --card-foreground: 210 20% 95%;
-
-    --popover: 222 25% 12%;
-    --popover-foreground: 210 20% 95%;
-
-    --primary: 199 89% 55%;
-    --primary-foreground: 220 25% 8%;
-
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 20% 90%;
-
-    --muted: 220 20% 15%;
-    --muted-foreground: 215 15% 55%;
-
-    --accent: 38 92% 55%;
-    --accent-foreground: 0 0% 10%;
-
-    --success: 152 76% 45%;
-    --success-foreground: 0 0% 100%;
-    
-    --warning: 38 92% 55%;
-    --warning-foreground: 0 0% 10%;
-    
-    --destructive: 0 72% 55%;
-    --destructive-foreground: 0 0% 100%;
-
-    --status-operational: 152 76% 45%;
-    --status-maintenance: 38 92% 55%;
-    --status-fault: 0 72% 55%;
-    --status-offline: 215 15% 45%;
-
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 199 89% 55%;
-
-    --sidebar-background: 222 30% 6%;
-    --sidebar-foreground: 215 20% 85%;
-    --sidebar-primary: 199 89% 55%;
-    --sidebar-primary-foreground: 220 25% 8%;
-    --sidebar-accent: 222 25% 14%;
-    --sidebar-accent-foreground: 215 20% 95%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 199 89% 55%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(199 89% 55%), hsl(210 85% 45%));
-    --gradient-hero: linear-gradient(180deg, hsl(222 30% 8%) 0%, hsl(222 25% 12%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(222 25% 12%) 0%, hsl(222 25% 10%) 100%);
-
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -4px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 30px hsl(199 89% 55% / 0.25);
-  }
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-100: #f4f4f5;
 }
 
 @layer base {
   * {
-    @apply border-border;
-  }
-
-  html {
-    font-family: var(--font-sans);
+    scrollbar-width: thin;
+    scrollbar-color: #27272a transparent;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "ss01", "ss02", "cv01";
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background-color: #09090b;
+    color: #f4f4f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  code, pre, .font-mono {
-    font-family: var(--font-mono);
+  ::selection {
+    background-color: rgba(14, 165, 233, 0.3);
+    color: #f4f4f5;
   }
 }
 
 @layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
+  .animate-in {
+    animation: animate-in 200ms ease-out;
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .gradient-card {
-    background: var(--gradient-card);
-  }
-
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-
-  .text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Status badge utilities */
-  .status-operational {
-    @apply bg-success/10 text-success border-success/20;
-  }
-
-  .status-maintenance {
-    @apply bg-warning/10 text-warning border-warning/20;
-  }
-
-  .status-fault {
-    @apply bg-destructive/10 text-destructive border-destructive/20;
-  }
-
-  .status-offline {
-    @apply bg-muted text-muted-foreground border-border;
-  }
-
-  /* Animation utilities */
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out;
-  }
-
-  @keyframes fadeIn {
+  @keyframes animate-in {
     from {
       opacity: 0;
-      transform: translateY(8px);
+      transform: scale(0.95);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
-  }
-
-  /* RTL Support */
-  .rtl {
-    direction: rtl;
-    text-align: right;
-  }
-
-  [dir="rtl"] .sidebar {
-    right: 0;
-    left: auto;
-  }
-
-  [dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]),
-  [dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
-  [dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]),
-  [dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 1;
   }
 }
