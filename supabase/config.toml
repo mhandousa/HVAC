@@ -1,0 +1,40 @@
+project_id = "ltqhdbovwiepvgziyaya"
+
+[functions.equipment-health]
+verify_jwt = true
+
+[functions.hvac-ai]
+verify_jwt = true
+
+[functions.warranty-notifications]
+verify_jwt = false
+
+[functions.seed-equipment-catalog]
+verify_jwt = false
+
+[functions.zatca-einvoice]
+verify_jwt = true
+
+[functions.seed-pump-curves]
+verify_jwt = false
+
+[functions.ingest-sensor-data]
+verify_jwt = false
+
+[functions.seed-iot-monitoring]
+verify_jwt = false
+
+[functions.mqtt-bridge]
+verify_jwt = false
+
+[functions.verification-reminders]
+verify_jwt = false
+
+[functions.acoustic-alert-check]
+verify_jwt = false
+
+[functions.seed-chiller-catalog]
+verify_jwt = false
+
+[functions.send-approval-notification]
+verify_jwt = false
