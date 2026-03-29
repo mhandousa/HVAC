@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FileBarChart, Download, FolderKanban } from 'lucide-react'
+import { ChartBar as FileBarChart, Download, FolderKanban } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader } from '@/components/ui/Card'

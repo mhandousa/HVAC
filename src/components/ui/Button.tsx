@@ -1,6 +1,6 @@
 import { forwardRef, type ButtonHTMLAttributes } from 'react'
 import { cn } from '@/utils/cn'
-import { Loader2 } from 'lucide-react'
+import { Loader as Loader2 } from 'lucide-react'
 
 const variants = {
   primary: 'bg-sky-600 text-white hover:bg-sky-500 active:bg-sky-700',

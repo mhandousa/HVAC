@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FolderKanban, Calculator, Database, FileBarChart, Plus, ArrowRight } from 'lucide-react'
+import { FolderKanban, Calculator, Database, ChartBar as FileBarChart, Plus, ArrowRight } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { StatsCard } from '@/components/dashboard/StatsCard'
 import { Button } from '@/components/ui/Button'

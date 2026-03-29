@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Wind, Calculator, Database, FileBarChart, Shield, Zap, ArrowRight, Check } from 'lucide-react'
+import { Wind, Calculator, Database, ChartBar as FileBarChart, Shield, Zap, ArrowRight, Check } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const features = [

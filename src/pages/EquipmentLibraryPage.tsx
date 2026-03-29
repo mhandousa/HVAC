@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Database, Search, Filter } from 'lucide-react'
+import { Database, Search, ListFilter as Filter } from 'lucide-react'
 import { Header } from '@/components/layout/Header'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'

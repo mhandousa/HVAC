@@ -1,14 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import {
-  LayoutDashboard,
-  FolderKanban,
-  Calculator,
-  Database,
-  FileBarChart,
-  Settings,
-  Wind,
-  LogOut,
-} from 'lucide-react'
+import { LayoutDashboard, FolderKanban, Calculator, Database, ChartBar as FileBarChart, Settings, Wind, LogOut } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { useAuth } from '@/contexts/AuthContext'
 
